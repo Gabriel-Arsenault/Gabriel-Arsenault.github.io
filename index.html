@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang='en'>
+<link href="https://fonts.google.com/specimen/Roboto" rel="stylesheet" type="text/css">
+
+<head>
+<style>
+
+* {
+     box-sizing: border-box;
+}
+
+body {
+       background-position: center center;
+       background-size: cover;
+       height: 100vh;
+       width: 100vw;
+       background-image: url(https://i0.wp.com/wallur.com/wp-content/uploads/2016/12/pokemon-1-background-2.jpg?w=1920);
+       font-family: 'Roboto', sans-serif;
+       text-align: center;
+       margin: 0
+}
+
+
+h1 {
+      font-weight: 800;
+      line-height: 2.2;
+      font-family: inherit;
+      margin-bottom: 0;
+}
+
+h1 + p {
+  margin-top: 0;
+}
+
+form {
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 2 px 5px 10px rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      padding: 30px 20px;
+      max-width: 450px;
+      margin: 40px auto;
+}
+
+.form-control {
+     margin-bottom: 20px;
+     text-align: left;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: block;
+
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+}
+
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+
+
+
+button {
+  background-color: #FFA500;
+  display: block;
+  width: 100%;
+  padding: 20px
+  border: 1px solid #FFA500;
+  border-radius: 20px;
+  font-family: inherit;
+}
+
+ul.checkbox  {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  list-style: none;
+}
+
+ul.checkbox li input {
+  margin-right: .25em;
+}
+
+ul.checkbox li {
+  border: 1px transparent solid;
+  display:inline-block;
+  width:12em;
+}
+
+ul.checkbox li label {
+  margin-left: ;
+}
+ul.checkbox li:hover,
+ul.checkbox li.focus  {
+  background-color: #fed8b1;
+  border: 1px gray solid;
+  width: 12em;
+
+
+</style>
+</head>
+
+<h1 id='title'>The Pokemon Survey !</h1>
+<p id='description'><i>Professor Oak Annual Survey !<i><p>
+
+
+<form id="survey-form">
+  <div class="form-control">
+    <label for="name" id="name-label">Name</label>
+    <input
+    type="text"
+    name="name"
+    id="name"
+    class="form-control"
+    placeholder="Enter Your Name"
+    Required
+    />
+  </div>
+
+<div class="form-control">
+    <label for="email" id="email-label">Email</label>
+    <input
+    type="email"
+    name='email'
+    id='email'
+    placeholder="Enter Your Email"
+    class="form-control"
+    list="defaultemail"
+    required>
+     <datalist id="defaultemails">
+      <option value="example@gmail.com">
+      <option value='example@outlook.com'>
+      <option value='example@hotmai.com'>
+      <option value='example@msn.com'>
+      <option value='example@icloud.com'>
+    </datalist>
+</div>
+
+  <div class="form-control">
+    <label for='number' id="number-label">Age (Optional)</label>
+    <input
+      type="number"
+      name='number'
+      id='number'
+      placeholder="Age"
+      min='10'
+      max='90'>
+   </div>
+
+  <div class="form-control">
+    <label for='type'>Which Type Do You Prefer For Combat ?</label><br><br>
+     <select
+       name='type'
+       id='dropdown'
+       placeholder='Select Preferred Type'>
+
+      <option disabled selected value>Select an option</option>
+      <option value="Normal">Normal</option>
+      <option value='Fire'>Fire</option>
+      <option value="Water">Water</option>
+      <option value="Fighting">Fighting</option>
+      <option value="Grass">Grass</option>
+      <option value="Poison">Poison</option>
+      <option value="Electric">Electric</option>
+      <option value="Ground">Ground</option>
+      <option value="Psychic">Psychic</option>
+      <option value="Rock">Rock</option>
+      <option value="Ice">Ice</option>
+      <option value="Bug">Bug</option>
+      <option value="Dragon">Dragon</option>
+      <option value="Ghost">Ghost</option>
+      <option value="Dark">Dark</option>
+      <option value="Steel">Steel</option>
+      <option value="Fairy">Fairy</option>
+     </select>
+   </div>
+
+  <div class="form-control">
+    <h3>Are You Ready To Be The Very Best ?</h3>
+    <label for="Yes">
+      <input
+        id="Yes"
+        type="radio"
+        name="the-best"
+        value="yes"
+        checked>
+        Yes</label>
+
+    <label for="No">
+      <input
+        id="No"
+        type="radio"
+        name="the-best"
+        value="no">
+        No</label>
+
+    <h3>Are You Ready To Get'em All ?</h3>
+    <label for="Yes">
+      <input
+        id="Yes"
+        type="radio"
+        name="get-them"
+        value='yes'
+        checked>
+        Yes</label>
+
+    <label for="No">
+      <input
+        id="No"
+        type="radio"
+        name="get-them"
+        value="no">
+        No</label>
+  </div>
+
+  <div class="form-control">
+        <p>
+          Who Is Your Favorite Professor ?
+        </p>
+        <select id="favorite" name="favorite" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="professor oak">Professor Oak</option>
+          <option value="professor oak">Professor Oak</option>
+          <option value="professor oak">Professor Oak</option>
+          <option value="professor oak">Professor Oak</option>
+        </select>
+      </div>
+
+  <div class="form-control">
+    <h3>What's Your Best Combination Of Types For Arena Battle ?</h3>
+  <ul class="checkbox">
+    <li><label for="normal"><input id="normal" type="checkbox" name='arena' value="normal">Normal</input></li>
+    <li><label for="fire"><input id="fire" type="checkbox" name='arena' value="fire">Fire</input></li>
+    <li><label for="Water"><input id="Water" type="checkbox" name='arena' value="Water">Water</input></li>
+    <li><label for="Fighting"><input id="Fighting" type="checkbox" name='arena' value="Fighting">Fighting</input></li>
+    <li><label for="Grass"><input id="Grass" type="checkbox" name='arena' value="Grass">Grass</input></li>
+    <li><label for="Poison"><input id="Poison" type="checkbox" name='arena' value="Poison">Poison</input></li>
+    <li><label for="Electric"><input id="Electric" type="checkbox" name='arena' value="Electric">Electric</input></li>
+    <li><label for="Ground"><input id="Ground" type="checkbox" name='arena' value="Ground">Ground</input></li>
+    <li><label for="Psychic"><input id="Psychic" type="checkbox" name='arena' value="Psychic">Psychic</input></li>
+    <li><label for="Rock"><input id="Rock" type="checkbox" name='arena' value="Rock">Rock</input></li>
+    <li><label for="Ice"><input id="Ice" type="checkbox" name='arena' value="Ice">Ice</input></li>
+    <li><label for="Bug"><input id="Bug" type="checkbox" name='arena' value="Bug">Bug</input></li>
+    <li><label for="Dragon"><input id="Dragon" type="checkbox" name='arena' value="Dragon">Dragon</input></li>
+    <li><label for="Ghost"><input id="Ghost" type="checkbox" name='arena' value="Ghost">Ghost</input></li>
+    <li><label for="Dark"><input id="Dark" type="checkbox" name='arena' value="Dark">Dark</input></li>
+    <li><label for="Steel"><input id="Steel" type="checkbox" name='arena' value="Steel">Steel</input></li>
+    <li><label for="Fairy"><input id="Fairy" type="checkbox" name='arena' value="Fairy">Fairy</input></li>
+  </ul>
+  </div>
+
+   <div class="form-control">
+     <textarea
+       name="tell-us-more"
+       id="tell-us-more"
+       rows="4"
+       cols="50"
+       placeholder="Tell us more about your favorite pokemon!">
+     </textarea>
+<br>
+     <div class="form-control">
+      <button
+        type="submit"
+        id="submit"
+        class="submit-button">
+        Submit
+      </button>
+   </div>
+  </form>
+
+</html>
